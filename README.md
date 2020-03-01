@@ -1,4 +1,4 @@
-A simple one-to-one CRUD with Laravel_6 
+A simple one-to-one CRUD with Laravel_6 (6.17.1)
 
 
 
