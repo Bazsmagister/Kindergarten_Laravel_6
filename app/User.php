@@ -30,7 +30,7 @@ class User extends Authenticatable
 
     /**
      * The attributes that should be cast to native types.
-     *
+     * new in Laravel 6.
      * @var array
      */
     protected $casts = [
