@@ -12,7 +12,7 @@ $factory->define(Address::class, function (Faker $faker) {
         'street_name' => $faker->streetName,
         'street_number' => $faker->buildingNumber, //numberBetween($min = 1, $max = 200),
         'zip'=> $faker->numberBetween($min = 1000, $max = 9999),
-        'city'=> $faker->smallerCity,
+        'city'=> $faker->city,
         'siblings_num'=> $faker->numberBetween($min = 0, $max = 5),
     ];
 });

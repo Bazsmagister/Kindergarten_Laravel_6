@@ -4,9 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
+    protected $rules =
+        [
+            //'first_name' => 'required|min:2|max:32|regex:/^[a-z ,.\'-]+$/i',
+            //'last_name' => 'required|min:2|max:128|regex:/^[a-z ,.\'-]+$/i',
+            'first_name' => 'bail|required|alpha_dash|max:250',
+            'last_name' => 'bail|required|alpha_dash|max:250',
+            'sign' => 'required|alpha_dash|max:250',
+            'age' => 'required|numeric|max:99',
+            'street_name' => 'max:250',
+            'street_number' => 'max:250',
+            'zip' => 'nullable|numeric|digits:4',
+            'city' => 'required|alpha_dash|max:250',
+            //'siblings_num' => 'bail|required|numeric|max:11',
+            'siblings_num' => 'numeric'
+        ];
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +30,20 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        /*
+        $students = DB::table('students')
+        ->leftJoin('addresses', 'students.id', '=', 'addresses.student_id')
+        ->select('students.*', 'addresses.siblings_num', 'addresses.city', 'addresses.zip', 'addresses.street_name', 'addresses.street_number')
+        ->orderBy('id', 'desc')
+        //->get();
+        ->get(['first_name', 'last_name', 'sign', 'age', 'siblings_num']);//->stringify();
+        //var_dump($students);
+        //$students= json_decode( json_encode($students));
+        //$students->address()->save($address);
+        return view('ajax', compact('students'));
+        */
+        $students = DB::table('students')->all();
+        return view('students', compact('students'));
     }
 
     /**
