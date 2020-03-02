@@ -14,5 +14,16 @@ class Address extends Model
     {
         return $this->belongsTo(Student::class);
         //return $this->belongsTo('App\Student', 'student_id');
+
+        /*
+
+            If you would like to make all attributes mass assignable, you may define the $guarded property as an empty array:
+
+            * The attributes that aren't mass assignable.
+            *
+            * @var array
+            protected $guarded = [];
+
+        */
     }
 }
