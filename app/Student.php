@@ -22,9 +22,6 @@ protected $guarded = [];
 */
 
 
-
-
-
     public function adress()
     {
         return $this->hasOne('App\Address');
