@@ -1,0 +1,16 @@
+html{
+
+    background-color: gray;
+}
+
+body{
+    background-color: khaki;
+    justify-self: flex-end;
+
+
+}
+
+div{
+    background-color: lightgreen;
+    /*display: flex;*/
+}

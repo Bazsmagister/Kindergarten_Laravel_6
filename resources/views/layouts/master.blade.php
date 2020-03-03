@@ -1,4 +1,4 @@
-@include ('layouts.headajax')
+@include ('layouts.header')
 
 
 
