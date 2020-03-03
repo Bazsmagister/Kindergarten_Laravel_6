@@ -15,5 +15,8 @@
     @endforeach
 
 
+    {{ $addresses->links() }}
+
+
 </body>
 </html>

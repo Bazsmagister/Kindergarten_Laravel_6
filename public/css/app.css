@@ -2,9 +2,9 @@ html, body {
     background-color: gray;
     color: #636b6f;
     /*font-family: 'Nunito', sans-serif;*/
-    font-weight: 300;
+    font-weight: 10000;
 
-    margin-top: 100px ;
+    margin-top: 50px ;
 }
 
 body {
