@@ -9,11 +9,11 @@
 <body>
 
 
-    @foreach ($students as $student)
+    @foreach ($addresses as $address)
 
         <div>
             <ul>
-                <li>{{$student->first_name}} {{$student->last_name}} </li>
+                <li>{{$address->zip}} {{$address->city}} </li>
             </ul>
         </div>
 
