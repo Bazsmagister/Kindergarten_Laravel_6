@@ -16,7 +16,7 @@ class AddressController extends Controller
     {
         //$addresses = Address::all();
         //$addresses = Address::paginate(5);
-        $addresses = Address::simplePaginate(10);
+        $addresses = Address::simplePaginate(6);
         return view('addresses', compact('addresses'));
     }
 

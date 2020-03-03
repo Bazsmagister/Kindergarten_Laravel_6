@@ -1,4 +1,4 @@
-@include ('layouts.header')
+@include ('includes.head')
 
 
 <body>
@@ -6,7 +6,7 @@
 
     @foreach ($addresses as $address)
 
-        <div class="flex-center">
+        <div class="container">
             <ul>
                 <li>{{$address->zip}} {{$address->city}} {{$address->street_name}} {{$address->street_number}} <hr> </li>
             </ul>
@@ -18,5 +18,12 @@
     {{ $addresses->links() }}
 
 
+
+
 </body>
+
+<footer >
+    @include ('includes.footer')
+</footer>
+
 </html>

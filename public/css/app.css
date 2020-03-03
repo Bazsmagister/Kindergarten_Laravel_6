@@ -22,3 +22,8 @@ div {
     display: flex;
     justify-content: center;
 }
+footer{
+      background-color: rgb(94, 124, 187);
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+}
