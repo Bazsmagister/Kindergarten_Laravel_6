@@ -6,9 +6,9 @@
 
     @foreach ($addresses as $address)
 
-        <div>
+        <div class="flex-center">
             <ul>
-                <li>{{$address->zip}} {{$address->city}} </li>
+                <li>{{$address->zip}} {{$address->city}} {{$address->street_name}} {{$address->street_number}} <hr> </li>
             </ul>
         </div>
 
