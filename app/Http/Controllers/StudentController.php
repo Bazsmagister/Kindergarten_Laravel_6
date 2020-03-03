@@ -42,8 +42,16 @@ class StudentController extends Controller
         //$students->address()->save($address);
         return view('ajax', compact('students'));
         */
-        $students = DB::table('students')->all();
+
+
+        $students = DB::table('students')->get();
         return view('students', compact('students'));
+
+
+        /*
+        $students = Student::all();
+        return view('students', compact('students'));
+        */
     }
 
     /**

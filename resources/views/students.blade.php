@@ -8,8 +8,14 @@
 </head>
 <body>
 
+
     @foreach ($students as $student)
-        var_dump($student);
+
+        <div>
+            <ul>
+                <li>{{$student->first_name}}</li>
+            </ul>
+        </div>
 
     @endforeach
 

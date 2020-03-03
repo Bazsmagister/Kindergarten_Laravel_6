@@ -12,8 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('students');
+    return view('welcome');
 });
 
 Route::resource('students', 'StudentController');
 Route::resource('addresses', 'AddressController');
+
+/* same:
+Route::resource([
+    'students' => 'StudentController',
+    'addresses' => 'AddressController'
+]);
+*/
+
+
+/*
+Route::get('/home', 'HomeController@index');
+
+public function index()
+{
+    $categories = Category::all();
+    $articles   = Article::all();
+
+    return view('/home', compact('articles', 'categories'));
+}
+*/
