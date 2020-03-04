@@ -1,11 +1,17 @@
-html, body {
+header, #header{
+    background-color: lightblue;
+}
+
+body {
     background-color: gray;
     color: #636b6f;
     /*font-family: 'Nunito', sans-serif;*/
-    font-weight: 10000;
 
-    margin-top: 50px ;
+
+   /* margin-top: 50px ;
+*/
 }
+
 
 body {
     /*background-color: khaki;*/
