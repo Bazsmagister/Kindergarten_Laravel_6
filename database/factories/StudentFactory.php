@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Student;
+use App\Models\Student;
 use Faker\Generator as Faker;
 
 $factory->define(Student::class, function (Faker $faker) {
@@ -10,7 +10,7 @@ $factory->define(Student::class, function (Faker $faker) {
         'first_name' =>  $faker->firstname,
         'last_name' => $faker->lastname,
         'sign' => $faker-> sentence,
-        'age' => $faker-> numberBetween($min=4, $max=6),
+        'age' => $faker-> numberBetween($min = 4, $max = 6),
 
     ];
 });
